@@ -37,7 +37,7 @@ jobs:
     #   run: kubectl get deployment <deployment-name> -o jsonpath='{.spec.template.spec.containers[0].image}'
 
     - name: Update image in deployment
-      run: kubectl set image deployment/ecomm-app app=nginx
+      run: kubectl set image deployment/ecomm-app app=nginx --record=true
 
     # - name: Rollout deployment
     #   run: kubectl rollout restart deployment <deployment-name>
