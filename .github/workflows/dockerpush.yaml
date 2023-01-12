@@ -18,6 +18,7 @@ jobs:
     - name: Build image
       run: |
         IMAGE_TAG=$(echo ${GITHUB_SHA} | cut -c1-7)
+        echo "Building image with tag: ${IMAGE_TAG}"
         docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPO }}:${IMAGE_TAG} docker/
 
     - name: Login to Docker Hub
