@@ -28,10 +28,10 @@ jobs:
         sudo mv kubectl /usr/local/bin/
 
     - name: Configure kubectl for EKS
-      env:
-        AWS_REGION: <aws-region>
-        AWS_ACCESS_KEY_ID: <aws-access-key-id>
-        AWS_SECRET_ACCESS_KEY: <aws-secret-access-key>
+      # env:
+      #   AWS_REGION: ap-south
+      #   AWS_ACCESS_KEY_ID: <aws-access-key-id>
+      #   AWS_SECRET_ACCESS_KEY: <aws-secret-access-key>
       run: aws eks update-kubeconfig --name eks-cluster 
 
     # - name: Get current deployment image
