@@ -36,7 +36,3 @@ module "eks" {
   cluster-sg = lookup(module.sg.sg_id,"eks-sg",null)
 }
 
-module "ecr" {
-  source = "./module/ecr"
-  ecr_name = var.ecr_name
-}
