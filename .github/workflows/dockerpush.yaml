@@ -1,0 +1,15 @@
+name: Build and push image to dockerhub 
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: docker-practice/actions-setup-docker@master
+      timeout-minutes: 12
+    - name: docker version
+      run: docker --version
