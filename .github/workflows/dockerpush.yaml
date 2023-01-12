@@ -9,7 +9,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
     - uses: docker-practice/actions-setup-docker@master
       timeout-minutes: 12
+      
     - name: docker version
       run: docker --version
+
+    - name: Build image
+      run: docker build -t nikhil_repo/my_nginx:v0.1.0 docker/
