@@ -1,9 +1,8 @@
 name: Deployment Image Update on EKS
 on: 
-  # push:
-  #   branches:
-  #     - main
-  workflow_dispatch:
+  push:
+    branches:
+      - master
 
 jobs:
   deploy:
